@@ -7,5 +7,6 @@
   "platforms": [
     "spigot",
     "paper"
-  ]
+  ],
+  "scripts": ["../hooks/Geyser.js"]
 }
