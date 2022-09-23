@@ -4,5 +4,6 @@
   "platforms": [
     "spigot",
     "paper"
-  ]
+  ],
+  "scripts": ["../hooks/Dynmap.js"]
 }
