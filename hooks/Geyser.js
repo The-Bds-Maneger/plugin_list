@@ -1,7 +1,7 @@
 const portListen = /^\[.*\].*Geyser.*\s+(([0-9]+\.[0-9]+\.[0-9]+\.[0-9]+|[a-zA-Z0-9:]+):([0-9]+))/;
-export const platforms = ["spigot", "paper"];
-export const scriptName = "Geyser";
-export function register(actions) {
+module.exports.platforms = ["spigot", "paper"];
+module.exports.scriptName = "Geyser";
+module.exports.register = function (actions) {
   actions.on("data", line => {
     if (portListen.test(line)) {
       const geyserPort = data.match(geyserPortListen);
