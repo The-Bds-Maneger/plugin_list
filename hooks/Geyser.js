@@ -1,4 +1,6 @@
 const portListen = /^\[.*\].*Geyser.*\s+(([0-9]+\.[0-9]+\.[0-9]+\.[0-9]+|[a-zA-Z0-9:]+):([0-9]+))/;
+export const platforms = ["spigot", "paper"];
+export const scriptName = "Geyser";
 export function register(actions) {
   actions.on("data", line => {
     if (portListen.test(line)) {
