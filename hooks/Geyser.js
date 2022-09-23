@@ -4,7 +4,7 @@ module.exports.scriptName = "Geyser";
 module.exports.register = function (actions) {
   actions.on("data", line => {
     if (portListen.test(line)) {
-      const geyserPort = line.match(geyserPortListen);
+      const geyserPort = line.match(portListen);
       let [,, host, port] = geyserPort;
       if (host === "*"||!host) host = "127.0.0.1";
       return actions.emit("portListening", {
