@@ -12,7 +12,7 @@ module.exports.register = function (actions) {
           type: "UDP",
           host: host,
           protocol: /::/.test(host?.trim())?"IPv6":/[0-9]+\.[0-9]+/.test(host?.trim())?"IPv4":"IPV4/IPv6",
-          plugin: "geyser"
+          plugin: "dynmap"
       });
     }
   });
